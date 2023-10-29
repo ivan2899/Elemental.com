@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemental</title>
+
+    <script src="https://kit.fontawesome.com/a2dd6045c4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" type="image/ico" href="img/favicon.ico">
+</head>
+
+<body>
+
+    <nav>
+        <div class="telefono">
+            <div class="header">
+                <div class="logo">Logo</div>
+                <div class="mas">
+                    <button id="bMore"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div>
+
+
+            <div class="links" id="links">
+                <a href="#">Servicios</a>
+                <a href="#">Acerca de</a>
+                <a href="#">Contactos</a>
+                <a href="#">Buscar</a>
+                <a href="#">Registrarse</a>
+                <a href="#">Inicio</a>
+            </div>
+        </div>
+
+
+        <div class="pc">
+            <div class="logo"><img class="imagen" src="img/logo.png" alt="" width="50px" height="50px">Elemental</div>
+            <div class="principal">
+                <a href="#">servicios</a>
+                <a href="#fin">Acerca de</a>
+                <a href="#">Contactos</a>
+            </div>
+
+            <div class="secundario full">
+                <a href="#">Buscar</a>
+                <a href="#">Registrarse</a>
+                <a href="#">Inicio</a>
+            </div>
+
+            <div class="secundario-mini">
+                <a href="#" class="mas">Más</a>
+                <div class="submenu">
+                    <a href="#">Buscar</a>
+                    <a href="#">Registrarse</a>
+                    <a href="#">Inicio</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="calculadora">
+            <h2>Calculadora ✓</h2>
+
+            <input id="txtIdResultado" type="text" readonly placeholder="Resultado">
+            <div class="botones">
+                <button onclick="CargarCaracter(1, 'txtIdResultado');" style="margin-left: 20px;">1</button>
+                <button onclick="CargarCaracter(2, 'txtIdResultado');">2</button>
+                <button onclick="CargarCaracter(3, 'txtIdResultado');">3</button>
+                <button onclick="OperadorCargado('+', 'txtIdResultado');">+</button>
+
+                <br>
+                <button onclick="CargarCaracter(4, 'txtIdResultado');" style="margin-left: 20px;">4</button>
+                <button onclick="CargarCaracter(5, 'txtIdResultado');">5</button>
+                <button onclick="CargarCaracter(6, 'txtIdResultado');">6</button>
+                <button onclick="OperadorCargado('-', 'txtIdResultado');">-</button>
+                <button onclick="LimpiarId('txtIdResultado');" style="margin-left: 17px;">AC</button>
+
+
+                <br>
+                <button onclick="CargarCaracter(7, 'txtIdResultado');" style="margin-left: 20px;">7</button>
+                <button onclick="CargarCaracter(8, 'txtIdResultado');">8</button>
+                <button onclick="CargarCaracter(9, 'txtIdResultado');">9</button>
+                <button onclick="OperadorCargado('*', 'txtIdResultado');">X</button>
+
+                <br>
+                <button onclick="CargarCaracter('.', 'txtIdResultado');" style="margin-left: 20px;">.</button>
+                <button onclick="CargarCaracter(0, 'txtIdResultado');">0</button>
+                <button onclick="CargarResultado('txtIdResultado');">=</button>
+                <button onclick="OperadorCargado('/', 'txtIdResultado');">÷</button>
+                <button onclick="RemoverUltimocaracter('txtIdResultado');" style="margin-left: 10px;">⌫ </button>
+            </div>
+            <hr>
+        </div>
+
+        <div class="conversor-numeros">
+            <h2>Conversor de numeros</h2>
+
+            <button>Hexadecimal</button>
+            <button>Binario</button>
+            <button>Decimal</button>
+            <button>Octal</button>
+            <button>Romano</button>
+            <hr>
+        </div>
+
+
+        <div class="conversor-grados">
+            <h2>Conversor de grados ✓</h2>
+            <p>Ingrese una temperatura</p>
+            <input id="txtIdTemperatura" type="text" placeholder="Temperatura"><br>
+
+            <label for="temp">Temperatura ingresada en:</label>
+
+            <select name="temp" id="ingresoTemp">
+                <option value="1">Celsius</option>
+                <option value="2">Kelvin</option>
+                <option value="3">Farenheit</option>
+            </select>
+
+            <br> <br>
+            <span id="resTemp"> </span>
+
+            <p>Convertir a:</p>
+            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 1);">Celsius</button>
+            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 2);">Kelvin</button>
+            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 3);">Farenheit</button>
+            <hr>
+        </div>
+
+        <div class="pasar-palabras">
+            <h2>Pasar a mayus o min</h2>
+            <textarea name="" id="txtTexto" cols="50" rows="10"></textarea>
+            <br> <br>
+            <div>
+                <label for="eleccion">Elija una opcion:</label> 
+                <br> 
+                <input type="radio" name="eleccion" value="1"> Primer letra de cada palabra
+                <br>
+                <input type="radio" name="eleccion" value="2"> Texto completo en min
+                <br>                
+                <input type="radio" name="eleccion" value="3"> Texto completo en may
+                <br>                
+                <input type="radio" name="eleccion" value="4"> Formato por defecto
+            </div>
+            
+            <br>
+            <button onclick="ConvertirTexto('txtTexto', 'eleccion');" class="aceptar btn">Aceptar</button>
+            <button onclick="LimpiarId('txtTexto');" class="cancelar btn">Cacelar</button>
+
+            <br>
+
+            <span id="res">a</span>
+            
+            <hr>
+        </div>
+
+        <div class="contador">
+            <h2>Contador de letras/palabras</h2>
+            <textarea name="" id="txtTexto" cols="50" rows="10"></textarea>
+            <br> <br>
+            <div>
+                <label for="eleccionCont">Elija una opcion:</label> 
+                <br> 
+                <input type="radio" name="eleccion2" id="contLetra"> Letras
+                <br>
+                <input type="radio" name="eleccion2" id="contPalabras"> Palabras
+                <br>                
+            </div>
+
+            <br><span></span>
+            <br>
+            <button class="aceptar btn">Aceptar</button>
+            <button class="cancelar btn">Cacelar</button>
+            <hr>
+        </div>
+
+        <div class="suma-numeros">
+            <h2>Contar dias</h2>
+
+
+            <hr>
+        </div>
+
+        <div class="suma-numeros">
+            <h2>JUEGOS</h2>
+
+
+            <hr>
+        </div>
+
+
+        <p style="font-size: 50px;">SITIO EN CONSTRUCCION, DISCULPE LAS MOLESTIAS 😀</p>
+    </section>
+
+    <footer>
+        <div id="fin">
+            <p>Iván Leonel Córdoba ® 2022</p>
+        </div>
+    </footer>
+
+
+    <script>
+        const bMore = document.getElementById('bMore');
+        const links = document.getElementById('links');
+
+        bMore.addEventListener('click', (e) => {
+            links.classList.toggle('collapsed')
+        })
+    </script>
+
+    <script src="js/calculadora.js"></script>
+    <script src="js/conversorGr.js"></script>
+    <script src="js/pasajePal.js"></script>
+
+</body>
+
+</html>
