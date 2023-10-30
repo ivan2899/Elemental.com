@@ -11,7 +11,7 @@
     <link rel="icon" type="image/ico" href="img/favicon.ico">
 </head>
 
-<body>
+<body id="page-top">
 
     <nav>
         <div class="telefono">
@@ -24,12 +24,13 @@
 
 
             <div class="links" id="links">
-                <a href="#">Servicios</a>
-                <a href="#">Acerca de</a>
-                <a href="#">Contactos</a>
+                <a href="#calculador">Calculadora</a>
+                <a href="#convertirGrados">Grados</a>
+                <a href="#fin">Acerca de</a>
+                <a href="#">Contacto</a>
                 <a href="#">Buscar</a>
                 <a href="#">Registrarse</a>
-                <a href="#">Inicio</a>
+                <a href="#page-top">Inicio</a>
             </div>
         </div>
 
@@ -37,15 +38,16 @@
         <div class="pc">
             <div class="logo"><img class="imagen" src="img/logo.png" alt="" width="50px" height="50px">Elemental</div>
             <div class="principal">
-                <a href="#">servicios</a>
+                <a href="#calculador">Calculadora</a>
+                <a href="#convertirGrados">Grados</a>
                 <a href="#fin">Acerca de</a>
-                <a href="#">Contactos</a>
+                <a href="#">Contacto</a>
             </div>
 
             <div class="secundario full">
                 <a href="#">Buscar</a>
                 <a href="#">Registrarse</a>
-                <a href="#">Inicio</a>
+                <a href="#page-top">Inicio</a>
             </div>
 
             <div class="secundario-mini">
@@ -53,14 +55,14 @@
                 <div class="submenu">
                     <a href="#">Buscar</a>
                     <a href="#">Registrarse</a>
-                    <a href="#">Inicio</a>
+                    <a href="#page-top">Inicio</a>
                 </div>
             </div>
         </div>
     </nav>
 
     <section>
-        <div class="calculadora">
+        <div class="calculadora" id="calculador">
             <h2>Calculadora ✓</h2>
 
             <input id="txtIdResultado" type="text" readonly placeholder="Resultado">
@@ -106,7 +108,7 @@
         </div>
 
 
-        <div class="conversor-grados">
+        <div class="conversor-grados" id="convertirGrados">
             <h2>Conversor de grados ✓</h2>
             <p>Ingrese una temperatura</p>
             <input id="txtIdTemperatura" type="text" placeholder="Temperatura"><br>
