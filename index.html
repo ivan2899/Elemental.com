@@ -16,7 +16,8 @@
     <nav>
         <div class="telefono">
             <div class="header">
-                <div class="logo">Logo</div>
+                <div class="logo"><img class="imagen" src="img/logo.png" alt="" width="50px" height="50px">Elemental
+                </div>
                 <div class="mas">
                     <button id="bMore"><i class="fa-solid fa-bars"></i></button>
                 </div>
@@ -61,42 +62,46 @@
         </div>
     </nav>
 
+    <!--
+    <p style="color: wheat; text-align: justify;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error velitducimus nulla quos mollitia voluptatibus atque nostrum totam suscipit doloremque! Dolorum eos quidem consequaturexcepturi eveniet porro dolor quisquam modi?Lorem ipsum dolor sit amet consectetur adipisicing elit. Error velit ducimus nulla quos mollitia voluptatibusatque nostrum totam suscipit doloremque! Dolorum eos quidem consequatur excepturi eveniet porro dolor quisquammodi?</p>
+    -->
+
     <section>
-        <div class="calculadora" id="calculador">
-            <h2>Calculadora ✓</h2>
+        <article class="calculadora" id="calculador">
+            <h2>Calculadora </h2>
 
-            <input id="txtIdResultado" type="text" readonly placeholder="Resultado">
+            <input id="txtIdResultado" type="text" readonly placeholder="Resultado" class="inputTxt">
             <div class="botones">
-                <button onclick="CargarCaracter(1, 'txtIdResultado');" style="margin-left: 20px;">1</button>
-                <button onclick="CargarCaracter(2, 'txtIdResultado');">2</button>
-                <button onclick="CargarCaracter(3, 'txtIdResultado');">3</button>
-                <button onclick="OperadorCargado('+', 'txtIdResultado');">+</button>
+                <button onclick="CargarCaracter(1, 'txtIdResultado');" class="btnCalcu">1</button>
+                <button onclick="CargarCaracter(2, 'txtIdResultado');" class="btnCalcu">2</button>
+                <button onclick="CargarCaracter(3, 'txtIdResultado');" class="btnCalcu">3</button>
+                <button onclick="OperadorCargado('+', 'txtIdResultado');" class="btnCalcu btnOp">+</button>
 
                 <br>
-                <button onclick="CargarCaracter(4, 'txtIdResultado');" style="margin-left: 20px;">4</button>
-                <button onclick="CargarCaracter(5, 'txtIdResultado');">5</button>
-                <button onclick="CargarCaracter(6, 'txtIdResultado');">6</button>
-                <button onclick="OperadorCargado('-', 'txtIdResultado');">-</button>
-                <button onclick="LimpiarId('txtIdResultado');" style="margin-left: 17px;">AC</button>
-
-
-                <br>
-                <button onclick="CargarCaracter(7, 'txtIdResultado');" style="margin-left: 20px;">7</button>
-                <button onclick="CargarCaracter(8, 'txtIdResultado');">8</button>
-                <button onclick="CargarCaracter(9, 'txtIdResultado');">9</button>
-                <button onclick="OperadorCargado('*', 'txtIdResultado');">X</button>
+                <button onclick="CargarCaracter(4, 'txtIdResultado');" class="btnCalcu">4</button>
+                <button onclick="CargarCaracter(5, 'txtIdResultado');" class="btnCalcu">5</button>
+                <button onclick="CargarCaracter(6, 'txtIdResultado');" class="btnCalcu">6</button>
+                <button onclick="OperadorCargado('-', 'txtIdResultado');" class="btnCalcu btnOp">-</button>
+                <button onclick="LimpiarId('txtIdResultado');" class="btnCalcu btnOp">AC</button>
 
                 <br>
-                <button onclick="CargarCaracter('.', 'txtIdResultado');" style="margin-left: 20px;">.</button>
-                <button onclick="CargarCaracter(0, 'txtIdResultado');">0</button>
-                <button onclick="CargarResultado('txtIdResultado');">=</button>
-                <button onclick="OperadorCargado('/', 'txtIdResultado');">÷</button>
-                <button onclick="RemoverUltimocaracter('txtIdResultado');" style="margin-left: 10px;">⌫ </button>
+                <button onclick="CargarCaracter(7, 'txtIdResultado');" class="btnCalcu">7</button>
+                <button onclick="CargarCaracter(8, 'txtIdResultado');" class="btnCalcu">8</button>
+                <button onclick="CargarCaracter(9, 'txtIdResultado');" class="btnCalcu">9</button>
+                <button onclick="OperadorCargado('*', 'txtIdResultado');" class="btnCalcu btnOp">x</button>
+
+                <br>
+                <button onclick="CargarCaracter('.', 'txtIdResultado');" class="btnCalcu btnOp">.</button>
+                <button onclick="CargarCaracter(0, 'txtIdResultado');" class="btnCalcu">0</button>
+                <button onclick="CargarResultado('txtIdResultado');" class="btnCalcu btnOp"
+                    style="background-color: aqua;">=</button>
+                <button onclick="OperadorCargado('/', 'txtIdResultado');" class="btnCalcu btnOp">÷</button>
+                <button onclick="RemoverUltimocaracter('txtIdResultado');" class="btnCalcu btnOp">⌫ </button>
             </div>
             <hr>
-        </div>
+        </article>
 
-        <div class="conversor-numeros">
+        <article class="conversor-numeros">
             <h2>Conversor de numeros</h2>
 
             <button>Hexadecimal</button>
@@ -105,10 +110,10 @@
             <button>Octal</button>
             <button>Romano</button>
             <hr>
-        </div>
+        </article>
 
 
-        <div class="conversor-grados" id="convertirGrados">
+        <article class="conversor-grados" id="convertirGrados">
             <h2>Conversor de grados ✓</h2>
             <p>Ingrese una temperatura</p>
             <input id="txtIdTemperatura" type="text" placeholder="Temperatura"><br>
@@ -122,53 +127,51 @@
             </select>
 
             <br> <br>
-            <span id="resTemp"> </span>
+            <span id="resTemp" style="color: orange;"> </span>
 
             <p>Convertir a:</p>
-            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 1);">Celsius</button>
-            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 2);">Kelvin</button>
-            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 3);">Farenheit</button>
+            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 1);" class="btnCG">Celsius</button>
+            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 2);" class="btnCG">Kelvin</button>
+            <button onclick="Operar('txtIdTemperatura', 'ingresoTemp', 3);" class="btnCG">Farenheit</button>
             <hr>
-        </div>
+        </article>
 
-        <div class="pasar-palabras">
+        <article class="pasar-palabras">
             <h2>Pasar a mayus o min</h2>
             <textarea name="" id="txtTexto" cols="50" rows="10"></textarea>
             <br> <br>
             <div>
-                <label for="eleccion">Elija una opcion:</label> 
-                <br> 
+                <label for="eleccion">Elija una opcion:</label>
+                <br>
                 <input type="radio" name="eleccion" value="1"> Primer letra de cada palabra
                 <br>
                 <input type="radio" name="eleccion" value="2"> Texto completo en min
-                <br>                
+                <br>
                 <input type="radio" name="eleccion" value="3"> Texto completo en may
-                <br>                
+                <br>
                 <input type="radio" name="eleccion" value="4"> Formato por defecto
             </div>
-            
+
             <br>
             <button onclick="ConvertirTexto('txtTexto', 'eleccion');" class="aceptar btn">Aceptar</button>
             <button onclick="LimpiarId('txtTexto');" class="cancelar btn">Cacelar</button>
 
             <br>
-
             <span id="res">a</span>
-            
             <hr>
-        </div>
+        </article>
 
-        <div class="contador">
+        <article class="contador">
             <h2>Contador de letras/palabras</h2>
             <textarea name="" id="txtTexto" cols="50" rows="10"></textarea>
             <br> <br>
             <div>
-                <label for="eleccionCont">Elija una opcion:</label> 
-                <br> 
+                <label for="eleccionCont">Elija una opcion:</label>
+                <br>
                 <input type="radio" name="eleccion2" id="contLetra"> Letras
                 <br>
                 <input type="radio" name="eleccion2" id="contPalabras"> Palabras
-                <br>                
+                <br>
             </div>
 
             <br><span></span>
@@ -176,21 +179,21 @@
             <button class="aceptar btn">Aceptar</button>
             <button class="cancelar btn">Cacelar</button>
             <hr>
-        </div>
+        </article>
 
-        <div class="suma-numeros">
+        <article class="suma-numeros">
             <h2>Contar dias</h2>
 
 
             <hr>
-        </div>
+        </article>
 
-        <div class="suma-numeros">
+        <article class="suma-numeros">
             <h2>JUEGOS</h2>
 
 
             <hr>
-        </div>
+        </article>
 
 
         <p style="font-size: 50px;">SITIO EN CONSTRUCCION, DISCULPE LAS MOLESTIAS 😀</p>

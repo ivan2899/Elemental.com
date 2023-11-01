@@ -64,5 +64,5 @@ function Operar(id1, id2, convertir) {
             break;
     }
 
-    document.getElementById('resTemp').innerHTML = auxTexto;
+        isNaN(tempValida) ? document.getElementById('resTemp').innerHTML = "No se ingresó un num valido" : document.getElementById('resTemp').innerHTML = auxTexto;
 }

@@ -25,6 +25,10 @@ function Dividir(num1, num2) {
 function Calcular(num1, num2, operador) {
     let resultado;
 
+    //TODO: No aparece el texto "No se puede dividir por cero"
+    //TODO: -66 -9; cambia el numero y pone -6-9 y da NaN (?)
+    //TODO: si pones un numero y lo borras, podes volver a poner un operador y queda 99+++++++++
+
     switch (operador) {
         case '+':
             resultado = Sumar(num1, num2);
@@ -152,9 +156,6 @@ function ConvertirBinarioADecimal(num) {
 
 }
 
-
-
-
 function MostrarCaracter(car) {
     alert(car);
 }
@@ -162,7 +163,6 @@ function MostrarCaracter(car) {
 function CargarCaracter(car, id) {
     let sePudo = false;
     let ant;
-    let aux;
 
     if (car === '+' || car === '-' || car === '*' || car === '/') {
         operador = car;

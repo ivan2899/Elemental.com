@@ -147,18 +147,18 @@ section{
 
 .cancelar:hover{
     color: #fff;
-    box-shadow: 0 0 20px #ff0e0e,
-                0 0 50px #ff0e0e,
-                0 0 85px #ff0e0e,
-                0 0 125px #ff0e0e;
+    box-shadow: 0 0 10px #ff0e0e,
+                0 0 30px #ff0e0e,
+                0 0 55px #ff0e0e,
+                0 0 15px #ff0e0e;
 }
 
 .aceptar:hover{
     color: #fff;
-    box-shadow: 0 0 20px #21ff00,
-                0 0 50px #21ff00,
-                0 0 85px #21ff00,
-                0 0 125px #21ff00;
+    box-shadow: 0 0 10px #21ff00,
+                0 0 30px #21ff00,
+                0 0 55px #21ff00,
+                0 0 15px #21ff00;
 }
 
 
@@ -171,4 +171,50 @@ footer{
     
     font-family: Arial, Helvetica, sans-serif;
     height: 100px;
+}
+
+.btnCalcu{
+    height: 50px;
+    width: 50px;
+    background-color: #CCCCCC; 
+    font-size: 20px;
+}
+
+.btnCalcu:hover{
+    background-color: #EEEEEE;
+    height: 45px;
+}
+
+.btnOp{
+    background-color: #888888; 
+    color: #000000;
+    font-size: 20px;
+}
+
+.btnOp:hover{
+    background-color: #666666;
+    height: 45px;
+}
+
+.inputTxt{
+    width: 500px;
+    height: 70px;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.btnCG{
+    height: 35px;
+    width: 70px;
+    border-radius: 20px;
+    background-color: #5f9ea0;
+}
+
+.btnCG:hover{
+    background-color: #5f9ea0AA;
+    height: 40px;
+    box-shadow: 0 0 20px aqua,
+                0 0 50px aqua,
+                0 0 85px aqua,
+                0 0 125px aqua;
 }
