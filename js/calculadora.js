@@ -223,3 +223,5 @@ function RemoverUltimocaracter(id)
    document.getElementById(id).value = nea;
    operador = undefined;
 }
+
+//TODO: ordenar las funciones en los respectivos archivos
