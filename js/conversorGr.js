@@ -41,7 +41,7 @@ function ConvertirKelvinAFahrenheit(temp) {
     return resultado;
 }
 
-function Operar(id1, id2, convertir) {
+function OperarGrados(id1, id2, convertir) {
 
     let auxIngresoEn = document.getElementById(id2).value;
     let ingresoEn = parseInt(auxIngresoEn);

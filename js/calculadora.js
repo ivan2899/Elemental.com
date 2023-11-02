@@ -13,19 +13,13 @@ function Multiplicar(num1, num2) {
 function Dividir(num1, num2) {
     let resultado;
 
-    if (num2 == 0) {
-        resultado = ("No se puede dividir por cero");
-    }
-    else {
-        resultado = num1 / num2;
-    }
+    num2 == 0 ? resultado = "No se puede dividir por cero" : resultado = num1 / num2;
     return resultado;
 }
 
 function Calcular(num1, num2, operador) {
     let resultado;
 
-    //TODO: No aparece el texto "No se puede dividir por cero"
     //TODO: -66 -9; cambia el numero y pone -6-9 y da NaN (?)
     //TODO: si pones un numero y lo borras, podes volver a poner un operador y queda 99+++++++++
 
@@ -116,45 +110,7 @@ function ValidarAnioBiciesto(year) {
     return (year % 4) == 0 ? anioOk = true : anioOk = false;
 }
 
-function ConvertirDecimalABinario(numDecimal) {
-    let retorno;
 
-    let numMax = 33554432;
-    let numBinario = "";
-    let band = false;
-
-    if (numDecimal >= 0) {
-        for (let i = 0; i < 26; i++) {
-            if (numDecimal >= numMax) {
-                numBinario += "1";
-                numDecimal = numDecimal - numMax;
-                band = true;
-            }
-            else {
-                if (band) {
-                    numBinario += "0";
-                }
-            }
-            numMax = numMax / 2;
-        }
-        retorno = numBinario;
-    }
-    else {
-        retorno = "Numero inválido";
-    }
-    return retorno;
-}
-
-function ConvertirBinarioADecimal(num) {
-
-    let sum = 0;
-
-    for (let i = 0; i < num.length; i++) {
-        sum += num[i] * 2 ** (num.length - 1 - i);
-    }
-    return sum;
-
-}
 
 function MostrarCaracter(car) {
     alert(car);
@@ -191,37 +147,33 @@ function CargarResultado(id) {
     let lista = ObtenerTexto(id);
     lista = lista.split(operador)
 
-        numero1 = parseFloat(lista[0]);
-        numero2 = parseFloat(lista[1]);
-        let aux = Calcular(numero1, numero2, operador);
-        num = parseFloat(aux);
-    
+    numero1 = parseFloat(lista[0]);
+    numero2 = parseFloat(lista[1]);
+    let numString = Calcular(numero1, numero2, operador);
+
     LimpiarId(id);
     operador = undefined;
-    document.getElementById(id).value = num;
+    document.getElementById(id).value = numString;
 }
 
 function OperadorCargado(car, id) {
 
-    if(operador === undefined)
-    {
+    if (operador === undefined) {
         CargarCaracter(car, id);
         bandOperador = true;
     }
-    else
-    {
+    else {
         RemoverUltimocaracter(id);
         CargarCaracter(car, id);
         bandOperador = true;
     }
 }
 
-function RemoverUltimocaracter(id)
-{
-   let aux = ObtenerTexto(id);
-   let nea = aux.substring(0, aux.length -1);
-   document.getElementById(id).value = nea;
-   operador = undefined;
+function RemoverUltimocaracter(id) {
+    let aux = ObtenerTexto(id);
+    let nea = aux.substring(0, aux.length - 1);
+    document.getElementById(id).value = nea;
+    operador = undefined;
 }
 
 //TODO: ordenar las funciones en los respectivos archivos
