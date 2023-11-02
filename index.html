@@ -15,6 +15,20 @@
 <!-- TODO: SACAR EL DARK DEL BODY PARA QUE FUNCIONE EL MODO OSCURO-->
 <!-- TODO: Arreglar el margen que queda entre el body y el section-->
 <!-- TODO: PONER AL INICION UN TEXTO DE BIENVENIDA, LUEGO 'CALCULADORA' DSPS 'CONVERSORES' (la pantalla dividida a la mitad y en un lado de numeros y otro de grados) DSPS 'CONTADORES' (lo mismo que para los conversores, con contar palabras pasar palabras) DSPS 'JUEGOS' (que esté el ahorcado, el adivina el numero, un tateti contra la maquina, etc, etc)-->
+<!-- TODO: 
+    Calculadora: Arreglo de errores
+    Conversor Numeros: Hacer que funcione hexadecimal, octal y romano, arreglo de errores, css
+    Conversor grados: css
+    Pasar may a min:
+    Contador palabras:
+
+
+
+
+
+
+
+-->
 
 
 <body id="page-top">
@@ -74,14 +88,14 @@
 
     
     <!-- <section id="Aolo"> -->
-        <span>Modo nocturno/claro: </span>
+        <span>Modo oscuro/claro: </span>
         <button class="switch" id="switch">
             <span><i class="fa-solid fa-sun"></i></span>
             <span><i class="fa-solid fa-moon"></i></span>
         </button>
 
         <article class="calculadora" id="calculador">
-            <h2>Calculadora ✓XX</h2>
+            <h2>Calculadora</h2>
 
             <input id="txtIdResultado" type="text" readonly placeholder="Resultado" class="inputTxt">
             <div class="botones">
@@ -115,7 +129,7 @@
         </article>
 
         <article class="conversor-numeros">
-            <h2>Conversor de numeros XXX</h2>
+            <h2>Conversor de numeros </h2>
             <p>Ingrese un numero</p>
             <input id="txtIdNumero" type="text" placeholder="Numero"><br>
             <label for="num">Numero ingresado en formato:</label>
@@ -142,7 +156,7 @@
 
 
         <article class="conversor-grados" id="convertirGrados">
-            <h2>Conversor de grados ✓✓X</h2>
+            <h2>Conversor de grados </h2>
             <p>Ingrese una temperatura</p>
             <input id="txtIdTemperatura" type="text" placeholder="Temperatura"><br>
 
@@ -166,7 +180,7 @@
 
         <article class="pasar-palabras">
             <h2>Pasar a mayus o min</h2>
-            <textarea name="" id="txtTexto" cols="50" rows="10"></textarea>
+            <textarea name="" id="txtTextoPalabras" cols="50" rows="10"></textarea>
             <br> <br>
             <div>
                 <label for="eleccion">Elija una opcion:</label>
@@ -181,9 +195,8 @@
             </div>
 
             <br>
-            <button onclick="ConvertirTexto('txtTexto', 'eleccion');" class="aceptar btn">Aceptar</button>
-            <input type="submit">
-            <button onclick="LimpiarId('txtTexto');" class="cancelar btn">Borrar todo</button>
+            <button onclick="ConvertirTexto('txtTextoPalabras', 'eleccion');" class="aceptar btn">Aceptar</button>
+            <button onclick="LimpiarId('txtTextoPalabras');" class="cancelar btn">Borrar todo</button>
 
             <br>
             <span id="spanPalMayMin"></span>
@@ -192,7 +205,7 @@
 
         <article class="contador">
             <h2>Contador de letras/palabras</h2>
-            <textarea name="" id="txtTexto" cols="50" rows="10"></textarea>
+            <textarea name="" id="txtTextoContador" cols="50" rows="10"></textarea>
             <br> <br>
             <div>
                 <label for="eleccionCont">Elija una opcion:</label>
@@ -206,7 +219,7 @@
             <br><span></span>
             <br>
             <button class="aceptar btn">Aceptar</button>
-            <button class="cancelar btn">Borrar todo</button>
+            <button onclick="LimpiarId('txtTextoContador')" class="cancelar btn">Borrar todo</button>
             <hr>
         </article>
 
@@ -226,7 +239,7 @@
 
 
         <p style="font-size: 50px;">SITIO EN CONSTRUCCION, DISCULPE LAS MOLESTIAS 😀</p>
-        <p style="font-size: 50px; color: yellow;">Se informa que se suspenden las actualizaciones de la web hasta el 24.11 por motivos ajenos a la empresa. Desde ya, muchas gracias</p>
+        <p style="font-size: 50px; color: goldenrod;">Se informa que quedann suspendidas las actualizaciones de la web hasta el 24.11 por motivos ajenos a la empresa. Desde ya, muchas gracias</p>
 
     
       <!--  </section>-->
