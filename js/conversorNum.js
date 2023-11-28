@@ -46,6 +46,30 @@ function ConvertirBinarioADecimal(num) {
     return sum;
 }
 
+function ConvertirDecimalAHexadecimal(num){
+
+}
+
+function ConvertirDecimalAOctal(num){
+    
+}
+
+function ConvertirDecimalARomano(num){
+    
+}
+
+function ConvertirHexadecimalADecimal(num){
+    
+}
+
+function ConvertirOctalADecimal(num){
+    
+}
+
+function ConvertirRomanoADecimal(num){
+    
+}
+
 function OperarNumeros(id1, id2, convertir) {
 
     let auxIngresoEn = document.getElementById(id2).value;
